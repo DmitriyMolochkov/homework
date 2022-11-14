@@ -30,7 +30,7 @@ function processNews(news: any, index = 0): Promise<any> {
           resolve(undefined);
         }
       }).then(() => {
-        if ((news.length - 1) >= index)
+        if ((news.length - 1) > index)
           return processNews(news, index + 1);
       })
     })
